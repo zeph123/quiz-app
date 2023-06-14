@@ -1,0 +1,92 @@
+
+NAME: addQuiz,
+METHOD: POST,
+ENDPOINT: /quizzes
+
+{
+    "quiz": {
+        "name": "Matematyczny Quiz 1"
+    },
+    "questions": [
+        {
+            "id": 0,
+            "name": "Ile to jest 2+2 ?",
+            "type": "1",
+            "orderNumber": 1,
+            "answers": [
+                {
+                    "id": 0,
+                    "name": "4",
+                    "isCorrect": true,
+                    "orderNumber": 1,
+                    "questionId": 0
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Ile wynosi wynik działania: 3x3 ?",
+            "type": "2",
+            "orderNumber": 2,
+            "answers": [
+                {
+                    "id": 0,
+                    "name": "3",
+                    "isCorrect": false,
+                    "orderNumber": 1,
+                    "questionId": 1
+                },
+                {
+                    "id": 1,
+                    "name": "9",
+                    "isCorrect": true,
+                    "orderNumber": 2,
+                    "questionId": 1
+                },
+                {
+                    "id": 2,
+                    "name": "5",
+                    "isCorrect": false,
+                    "orderNumber": 3,
+                    "questionId": 1
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Ile wynosi pierwiastek z 16 oraz z 64 ?",
+            "type": "3",
+            "orderNumber": 3,
+            "answers": [
+                {
+                    "id": 0,
+                    "name": "2",
+                    "isCorrect": false,
+                    "orderNumber": 1,
+                    "questionId": 2
+                },
+                {
+                    "id": 1,
+                    "name": "8",
+                    "isCorrect": true,
+                    "orderNumber": 2,
+                    "questionId": 2
+                },
+                {
+                    "id": 2,
+                    "name": "6",
+                    "isCorrect": false,
+                    "orderNumber": 3,
+                    "questionId": 2
+                },
+                {
+                    "id": 3,
+                    "name": "4",
+                    "isCorrect": true,
+                    "orderNumber": 4,
+                    "questionId": 2
+                }
+            ]
+        }
+    ]
+}

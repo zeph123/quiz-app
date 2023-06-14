@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+
+  postgres_db:
+    image: postgres:${POSTGRES_MAJOR_VERSION}.${POSTGRES_MINOR_VERSION}-bullseye
+    container_name: postgres_db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    env_file: .env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./db-data:/var/lib/postgresql/data:rw
+    networks:
+      - app_network
+
+volumes:
+  db-data:
+
+networks:
+  app_network:
+    driver: bridge
